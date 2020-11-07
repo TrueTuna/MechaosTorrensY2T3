@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private float drainTime; // since recent drain
 
     private Rigidbody rb;
+    public Animator animator;
 
     void Start()
     {
@@ -49,6 +50,38 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.position += new Vector3(0, 0, Input.GetAxis("Vertical") * MoveSpeed * Time.deltaTime);
                 transform.position += new Vector3(Input.GetAxis("Horizontal") * MoveSpeed * Time.deltaTime, 0, 0);
+            }
+
+            // relaying axis to animator
+            if (Input.GetAxis("Horizontal") == 0)
+            {
+                switch (Input.GetAxis("Vertical"))
+                {
+                    case -1:
+                        animator.SetInteger("Direction", -1);
+                        break;
+                    case 0:
+                        animator.SetInteger("Direction", 0);
+                        break;
+                    case 1:
+                        animator.SetInteger("Direction", 1);
+                        break;
+                }
+            }
+            else
+            {
+                switch (Input.GetAxis("Horizontal"))
+                {
+                    case -1:
+                        animator.SetInteger("Direction", -1);
+                        break;
+                    case 0:
+                        animator.SetInteger("Direction", 0);
+                        break;
+                    case 1:
+                        animator.SetInteger("Direction", 1);
+                        break;
+                }
             }
 
             // locking y axis

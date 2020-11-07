@@ -2521,6 +2521,7 @@ MonoBehaviour:
   movementEnabled: 0
   MoveSpeed: 7
   indicator: {fileID: 217897311}
+  animator: {fileID: 1309728120}
 --- !u!114 &275762017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8212,6 +8213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309728118}
   - component: {fileID: 1309728119}
+  - component: {fileID: 1309728120}
   m_Layer: 0
   m_Name: PlayerImage
   m_TagString: Untagged
@@ -8283,6 +8285,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1309728120
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309728117}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5defddc8cf5b2394f80633c0ada35638, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1312270708
 GameObject:
   m_ObjectHideFlags: 0
