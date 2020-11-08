@@ -8,8 +8,8 @@ public class PlayerHealthEnergy : MonoBehaviour
     // health energy values
     public float health;
     public float energy;
-    public float MAX_HEALTH;
-    public float MAX_ENERGY;
+    public float MAX_HEALTH = 100;
+    public float MAX_ENERGY = 10000;
     public Slider HealthBarRight;
     public Slider HealthBarLeft;
     public Slider EnergyBarRight;
@@ -22,8 +22,8 @@ public class PlayerHealthEnergy : MonoBehaviour
 
     void Start()
     {
-        MAX_HEALTH = health = 100;
-        MAX_ENERGY = energy = 10000;
+        health = MAX_HEALTH;
+        energy = MAX_ENERGY;
         shootingScript = gameObject.GetComponent<PlayerShooting>();
         movementScript = gameObject.GetComponent<PlayerMovement>();
     }

@@ -1,0 +1,488 @@
+fileFormatVersion: 2
+guid: a41733b3b4aa8fc448cb60939bcb0d98
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7216138848553452540
+    second: Enemy_Mech_walking_sprite_Left_0
+  - first:
+      213: 8608347959112960229
+    second: Enemy_Mech_walking_sprite_Left_1
+  - first:
+      213: -6318508088639618657
+    second: Enemy_Mech_walking_sprite_Left_2
+  - first:
+      213: -5914138856191142771
+    second: Enemy_Mech_walking_sprite_Left_3
+  - first:
+      213: -2721496114917115185
+    second: Enemy_Mech_walking_sprite_Left_4
+  - first:
+      213: 4072388326195614356
+    second: Enemy_Mech_walking_sprite_Left_5
+  - first:
+      213: 3259452123876256175
+    second: Enemy_Mech_walking_sprite_Left_6
+  - first:
+      213: 7950886758690742648
+    second: Enemy_Mech_walking_sprite_Left_7
+  - first:
+      213: 9167688091516911993
+    second: Enemy_Mech_walking_sprite_Left_8
+  - first:
+      213: 6466047026446080738
+    second: Enemy_Mech_walking_sprite_Left_9
+  - first:
+      213: 5943602820935390766
+    second: Enemy_Mech_walking_sprite_Left_10
+  - first:
+      213: 3772224076407066510
+    second: Enemy_Mech_walking_sprite_Left_11
+  - first:
+      213: 793774770108006989
+    second: Enemy_Mech_walking_sprite_Left_12
+  - first:
+      213: -68263782117358154
+    second: Enemy_Mech_walking_sprite_Left_13
+  - first:
+      213: -565338223103144861
+    second: Enemy_Mech_walking_sprite_Left_14
+  - first:
+      213: -4394512117777842540
+    second: Enemy_Mech_walking_sprite_Left_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 9
+        width: 45
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3ccedcc00e42460800000000000000
+      internalID: 7216138848553452540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_1
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 12
+        width: 46
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e803ed1cdef67770800000000000000
+      internalID: 8608347959112960229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 10
+        width: 62
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91043ace562058a0800000000000000
+      internalID: -6318508088639618657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_3
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 10
+        width: 48
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8454647b02cceda0800000000000000
+      internalID: -5914138856191142771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_4
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 11
+        width: 45
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca72ccd3bd4b3ad0800000000000000
+      internalID: -2721496114917115185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_5
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 12
+        width: 51
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49256523b97048830800000000000000
+      internalID: 4072388326195614356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_6
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 12
+        width: 55
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa96906ff66eb3d20800000000000000
+      internalID: 3259452123876256175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_7
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 14
+        width: 62
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8716e15a169375e60800000000000000
+      internalID: 7950886758690742648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_8
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 13
+        width: 63
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971c17a2fbb2a3f70800000000000000
+      internalID: 9167688091516911993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_9
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 10
+        width: 58
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea1a4013830cb950800000000000000
+      internalID: 6466047026446080738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_10
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 10
+        width: 61
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e261ddb664beb7250800000000000000
+      internalID: 5943602820935390766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_11
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 11
+        width: 58
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f4b67bfc1a95430800000000000000
+      internalID: 3772224076407066510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_12
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 11
+        width: 54
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4284f3a2fd040b00800000000000000
+      internalID: 793774770108006989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_13
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 10
+        width: 51
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5cedba37a7d0ff0800000000000000
+      internalID: -68263782117358154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_14
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 9
+        width: 46
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c8cf1a1e38728f0800000000000000
+      internalID: -565338223103144861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Mech_walking_sprite_Left_15
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 6
+        width: 47
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49eb3b2138e8303c0800000000000000
+      internalID: -4394512117777842540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 342e61df6aff9084fb10eb9e4f6d2945
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

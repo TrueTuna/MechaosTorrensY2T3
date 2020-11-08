@@ -24,6 +24,9 @@ public class PlayerShooting : MonoBehaviour
 
     private Vector3 mousePosition;
     private Quaternion direction;
+    public Animator shieldAnimator;
+    public Animator EnableAnimator;
+
 
     void Start()
     {
@@ -40,6 +43,7 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             shootingEnabled = checkForPress(shootingEnabled);
+            EnableAnimator.SetTrigger("Powering");
         }
 
         // create ray and line it up
@@ -93,9 +97,15 @@ public class PlayerShooting : MonoBehaviour
         // shield
         if (Input.GetMouseButton(1) == true && MovementScript.movementEnabled == true)
         {
+            shieldAnimator.SetBool("ShieldOn", true);
             PlayersShield.SetActive(true);
             PlayersShield.transform.rotation = direction;
             HealthEnergyScript.energy -= 10 * Time.deltaTime;
+        }
+        else if (shieldAnimator.GetCurrentAnimatorStateInfo(0).IsName("ShieldHold") || shieldAnimator.GetCurrentAnimatorStateInfo(0).IsName("ShieldOff"))
+        {
+            PlayersShield.SetActive(true);
+            shieldAnimator.SetBool("ShieldOn", false);
         }
         else
         {

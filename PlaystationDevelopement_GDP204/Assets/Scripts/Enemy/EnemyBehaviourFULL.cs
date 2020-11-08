@@ -32,6 +32,7 @@ public class EnemyBehaviourFULL : MonoBehaviour
     public float dashSpeed;
     bool dashInit = false;
     Vector3 dashTarget;
+    public Animator walkAnimator;
 
     void Start()
     {
@@ -54,13 +55,17 @@ public class EnemyBehaviourFULL : MonoBehaviour
         {
             agent.destination = goal.position;
         }
-        //if (Vector3.Distance(transform.position, goal.position) >= 5) // force restart incase the collision doesn't detect it
-        //{
-        //    EnableAgent(true);
-        //}
+
+        // animation
+        // horizontal check
+        if (gameObject.transform.position.x > goal.transform.position.x)
+            walkAnimator.SetInteger("Direction", -1);
+        if (gameObject.transform.position.x < goal.transform.position.x)
+            walkAnimator.SetInteger("Direction", 1);
+
+
 
         // shooting
-
         switch (enemyType)
         {
             // RANGED UNITS
@@ -80,6 +85,7 @@ public class EnemyBehaviourFULL : MonoBehaviour
                             break;
 
                     case Phases.charging:
+                        walkAnimator.SetInteger("Direction", 0);
                         if (chargeUpTimer > chargeRate)
                         {
                             currentPhase = Phases.attacking;
@@ -123,6 +129,7 @@ public class EnemyBehaviourFULL : MonoBehaviour
                         break;
 
                     case Phases.charging:
+                        walkAnimator.SetInteger("Direction", 0);
                         if (chargeUpTimer > chargeRate)
                         {
                             currentPhase = Phases.attacking;

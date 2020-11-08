@@ -14,11 +14,20 @@ public class ButtonActions : MonoBehaviour
     void Start()
     {
         main.SetActive(true);
+        Time.timeScale = 1f;
     }
 
-    public void Play()
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+    }
+
+    public void PlayLevel1()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
+
     }
 
     public void Instructions()

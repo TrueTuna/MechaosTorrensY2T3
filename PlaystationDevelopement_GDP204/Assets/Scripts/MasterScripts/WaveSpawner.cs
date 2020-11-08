@@ -30,7 +30,7 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
-        if (SpawnedEnemies.Count == 0) // only do when there are no people remaining
+        if (SpawnedEnemies.Count == 0 && currentWave <= totalWaves) // only do when there are no people remaining
         {
             if (waveSpacerTimer >= waveSpacer) // if enough time has passed
             {

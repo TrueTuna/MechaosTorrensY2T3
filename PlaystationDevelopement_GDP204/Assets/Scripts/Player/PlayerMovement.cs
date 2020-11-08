@@ -17,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private float drainTime; // since recent drain
 
     private Rigidbody rb;
-    public Animator animator;
+    public Animator walkAnimator;
+    public Animator EnableAnimator;
 
     void Start()
     {
@@ -33,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q))
         {
             movementEnabled = checkForPress(movementEnabled);
-        } 
+            EnableAnimator.SetTrigger("Powering");
+        }
     }
 
     void FixedUpdate()
@@ -58,13 +60,13 @@ public class PlayerMovement : MonoBehaviour
                 switch (Input.GetAxis("Vertical"))
                 {
                     case -1:
-                        animator.SetInteger("Direction", -1);
+                        walkAnimator.SetInteger("Direction", -1);
                         break;
                     case 0:
-                        animator.SetInteger("Direction", 0);
+                        walkAnimator.SetInteger("Direction", 0);
                         break;
                     case 1:
-                        animator.SetInteger("Direction", 1);
+                        walkAnimator.SetInteger("Direction", 1);
                         break;
                 }
             }
@@ -73,13 +75,13 @@ public class PlayerMovement : MonoBehaviour
                 switch (Input.GetAxis("Horizontal"))
                 {
                     case -1:
-                        animator.SetInteger("Direction", -1);
+                        walkAnimator.SetInteger("Direction", -1);
                         break;
                     case 0:
-                        animator.SetInteger("Direction", 0);
+                        walkAnimator.SetInteger("Direction", 0);
                         break;
                     case 1:
-                        animator.SetInteger("Direction", 1);
+                        walkAnimator.SetInteger("Direction", 1);
                         break;
                 }
             }
@@ -99,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             indicator.GetComponent<Image>().color = new Color(1.0f, 0.1f, 0.0f);
+            walkAnimator.SetInteger("Direction", 0);
         }
     }
 
