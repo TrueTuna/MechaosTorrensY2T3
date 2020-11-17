@@ -27,6 +27,8 @@ public class PlayerShooting : MonoBehaviour
     public Animator shieldAnimator;
     public Animator EnableAnimator;
 
+    // for axis management
+    private bool m_isAxisInUse = false;
 
     void Start()
     {
@@ -40,25 +42,52 @@ public class PlayerShooting : MonoBehaviour
         firingTimer += Time.deltaTime;
 
         // enable and disable
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetAxis("TriggerWeapons") == 1)
         {
-            shootingEnabled = checkForPress(shootingEnabled);
-            EnableAnimator.SetTrigger("Powering");
+            if (m_isAxisInUse == false)
+            {
+                // enable or disable
+                shootingEnabled = checkForPress(shootingEnabled);
+                // trigger animation
+                EnableAnimator.SetTrigger("Powering");
+                // button is held down so we block calling again
+                m_isAxisInUse = true;
+            }
+        }
+        else
+        {
+            // button is not pressed and therefore can be unset
+            m_isAxisInUse = false;
         }
 
-        // create ray and line it up
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if(Physics.Raycast(ray, out hit))
+        // playstation controller
+        if(Input.mousePresent) // if a mouseposition is found
         {
-            mousePosition = hit.point;
+            // create ray and line it up
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if(Physics.Raycast(ray, out hit))
+            {
+                mousePosition = hit.point;
+            }
+            direction = Quaternion.LookRotation(new Vector3(mousePosition.x, transform.position.y, mousePosition.z) - transform.position, transform.up);
         }
-        direction = Quaternion.LookRotation(new Vector3(mousePosition.x, transform.position.y, mousePosition.z) - transform.position, transform.up);
+        else // calculate quaternion using input axis horizontal and vertical
+        {
+            direction = Quaternion.LookRotation(
+                new Vector3(
+                    transform.position.x + (10 * Input.GetAxis("Look Horizontal")), 
+                    transform.position.y, 
+                    transform.position.z + (10 * Input.GetAxis("Look Vectical"))), 
+                transform.up);
+        }
+
+
 
         if(shootingEnabled)
         {
             // left click shooting
-            if (Input.GetMouseButton(0) == true && firingTimer >= firingRate)
+            if (Input.GetAxis("Shoot") == 1 && firingTimer >= firingRate)
             {
                 // create bullet and set its varaibles
                 GameObject i = Instantiate(BulletPreset, BulletSpawn.position, direction) as GameObject;
@@ -95,7 +124,7 @@ public class PlayerShooting : MonoBehaviour
         }
 
         // shield
-        if (Input.GetMouseButton(1) == true && MovementScript.movementEnabled == true)
+        if (Input.GetAxis("Block") == 1f && MovementScript.movementEnabled == true)
         {
             shieldAnimator.SetBool("ShieldOn", true);
             PlayersShield.SetActive(true);

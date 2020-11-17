@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     public Animator walkAnimator;
     public Animator EnableAnimator;
 
+    // axis management
+    private bool m_isAxisInUse = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,10 +34,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        // enable and disable
+        if(Input.GetAxis("Trigger Movement") == 1)
         {
-            movementEnabled = checkForPress(movementEnabled);
-            EnableAnimator.SetTrigger("Powering");
+            if (m_isAxisInUse == false)
+            {                
+                // enable or disable
+                movementEnabled = checkForPress(movementEnabled);
+                // trigger animation
+                EnableAnimator.SetTrigger("Powering");
+                // block repeated fucntion activation
+                m_isAxisInUse = true;
+            }
+        }
+        else
+        {
+            // button is not pressed and therefore can be unset
+            m_isAxisInUse = false;
         }
     }
 
@@ -42,49 +58,100 @@ public class PlayerMovement : MonoBehaviour
     {
         if(movementEnabled)
         {
-            // actual movement
-            if (!ShootingScript.shootingEnabled)
+            if (Input.mousePresent) // if a mouse is found
             {
-                transform.position += new Vector3(0, 0, Input.GetAxis("Vertical") * MoveSpeed * Time.deltaTime) * 1.5f;
-                transform.position += new Vector3(Input.GetAxis("Horizontal") * MoveSpeed * Time.deltaTime, 0, 0) * 1.5f;
+                // actual movement
+                if (!ShootingScript.shootingEnabled)
+                {
+                    transform.position += new Vector3(0, 0, Input.GetAxis("Move Vertical") * MoveSpeed * Time.deltaTime) * 1.5f;
+                    transform.position += new Vector3(Input.GetAxis("Move Horizontal") * MoveSpeed * Time.deltaTime, 0, 0) * 1.5f;
+                }
+                else
+                {
+                    transform.position += new Vector3(0, 0, Input.GetAxis("Move Vertical") * MoveSpeed * Time.deltaTime);
+                    transform.position += new Vector3(Input.GetAxis("Move Horizontal") * MoveSpeed * Time.deltaTime, 0, 0);
+                }
+
+                // relaying axis to animator
+                if (Input.GetAxis("Move Horizontal") == 0)
+                {
+                    switch (Input.GetAxis("Move Vertical"))
+                    {
+                        case -1:
+                            walkAnimator.SetInteger("Direction", -1);
+                            break;
+                        case 0:
+                            walkAnimator.SetInteger("Direction", 0);
+                            break;
+                        case 1:
+                            walkAnimator.SetInteger("Direction", 1);
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (Input.GetAxis("Move Horizontal"))
+                    {
+                        case -1:
+                            walkAnimator.SetInteger("Direction", -1);
+                            break;
+                        case 0:
+                            walkAnimator.SetInteger("Direction", 0);
+                            break;
+                        case 1:
+                            walkAnimator.SetInteger("Direction", 1);
+                            break;
+                    }
+                }
             }
-            else;
+            else // you have a joystick
             {
-                transform.position += new Vector3(0, 0, Input.GetAxis("Vertical") * MoveSpeed * Time.deltaTime);
-                transform.position += new Vector3(Input.GetAxis("Horizontal") * MoveSpeed * Time.deltaTime, 0, 0);
+                // actual movement
+                if (!ShootingScript.shootingEnabled)
+                {
+                    transform.position += new Vector3(0, 0, Input.GetAxis("VerticalMoveJoystick") * MoveSpeed * Time.deltaTime) * 1.5f;
+                    transform.position += new Vector3(Input.GetAxis("HorizontalMoveJoystick") * MoveSpeed * Time.deltaTime, 0, 0) * 1.5f;
+                }
+                else
+                {
+                    transform.position += new Vector3(0, 0, Input.GetAxis("VerticalMoveJoystick") * MoveSpeed * Time.deltaTime);
+                    transform.position += new Vector3(Input.GetAxis("HorizontalMoveJoystick") * MoveSpeed * Time.deltaTime, 0, 0);
+                }
+
+                // relaying axis to animator
+                if (Input.GetAxis("HorizontalMoveJoystick") == 0)
+                {
+                    switch (Input.GetAxis("VerticalMoveJoystick"))
+                    {
+                        case -1:
+                            walkAnimator.SetInteger("Direction", -1);
+                            break;
+                        case 0:
+                            walkAnimator.SetInteger("Direction", 0);
+                            break;
+                        case 1:
+                            walkAnimator.SetInteger("Direction", 1);
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (Input.GetAxis("HorizontalMoveJoystick"))
+                    {
+                        case -1:
+                            walkAnimator.SetInteger("Direction", -1);
+                            break;
+                        case 0:
+                            walkAnimator.SetInteger("Direction", 0);
+                            break;
+                        case 1:
+                            walkAnimator.SetInteger("Direction", 1);
+                            break;
+                    }
+                }
             }
 
-            // relaying axis to animator
-            if (Input.GetAxis("Horizontal") == 0)
-            {
-                switch (Input.GetAxis("Vertical"))
-                {
-                    case -1:
-                        walkAnimator.SetInteger("Direction", -1);
-                        break;
-                    case 0:
-                        walkAnimator.SetInteger("Direction", 0);
-                        break;
-                    case 1:
-                        walkAnimator.SetInteger("Direction", 1);
-                        break;
-                }
-            }
-            else
-            {
-                switch (Input.GetAxis("Horizontal"))
-                {
-                    case -1:
-                        walkAnimator.SetInteger("Direction", -1);
-                        break;
-                    case 0:
-                        walkAnimator.SetInteger("Direction", 0);
-                        break;
-                    case 1:
-                        walkAnimator.SetInteger("Direction", 1);
-                        break;
-                }
-            }
+
 
             // locking y axis
             transform.position = new Vector3(transform.position.x, 1, transform.position.z);
