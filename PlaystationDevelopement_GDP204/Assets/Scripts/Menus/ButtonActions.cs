@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+
 public class ButtonActions : MonoBehaviour
 {
     public GameObject main;
     public GameObject instructions;
     public GameObject options;
-
 
     void Start()
     {

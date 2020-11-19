@@ -1,0 +1,598 @@
+// GENERATED AUTOMATICALLY FROM 'Assets/PlayerControls.inputactions'
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
+
+public class PlayerControls : IInputActionCollection
+{
+    private InputActionAsset asset;
+    public PlayerControls()
+    {
+        asset = InputActionAsset.FromJson(@"{
+    ""name"": ""PlayerControls"",
+    ""maps"": [
+        {
+            ""name"": ""InGame"",
+            ""id"": ""3ec5f09c-a632-4ecd-aa9e-2c2b1aa0a363"",
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Button"",
+                    ""id"": ""6e8178de-522f-4be5-9d48-b564f231b380"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Aiming"",
+                    ""type"": ""Button"",
+                    ""id"": ""1619bf77-b55d-40f3-be5d-bf5e8517df4e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""dcfd1299-c800-4306-ae0d-f64c84e2e777"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Block"",
+                    ""type"": ""Button"",
+                    ""id"": ""d84c959d-714d-4ac3-a8c1-c1e0ebfc5c87"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""a008649e-99e6-4cd8-9ec7-30db0ac0362e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MovementToggle"",
+                    ""type"": ""Button"",
+                    ""id"": ""2d32988f-c49b-4eaa-8f9a-9ebb6bf9ce0e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""WeaponsToggle"",
+                    ""type"": ""Button"",
+                    ""id"": ""d255e18c-e1a9-45ad-94c1-a319a1b85bf1"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""End_PlayAgain"",
+                    ""type"": ""Button"",
+                    ""id"": ""b03a50ea-257f-480a-a6c5-e3b67bddb729"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""End_Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""e7e75e0e-2d46-4016-8ead-c0a921b07e25"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""End_Quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""9a677ab8-0e0a-4cfe-8d25-630a60326c24"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""985ef7c1-c4a0-4612-801b-01928d4c068a"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cb9786cd-f2d5-4fd9-b2b1-7ad28633bd84"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aiming"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ef76c369-2a38-47b6-abf8-481be6aa2269"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aiming"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""32cfc903-971b-4077-aeab-9daab1b12833"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c38cfc6f-6db4-481f-8581-48207ab8db56"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ee93ea73-7324-42c7-a2b4-f7cd0485dd91"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a79bcf57-fee4-4943-90c7-25279af406eb"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a857f9a7-ae60-4ed2-8659-bf9a6b7e83bb"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f79aa92f-f418-4daf-a173-9d6c3304ad2a"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1285e785-e8e0-4cf0-a59d-46ca25098d51"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovementToggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4145b38a-8bee-499e-80c9-0adf5127fba0"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovementToggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""be8922e6-bdf4-478d-ae42-366dff7189da"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WeaponsToggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c8834fab-4f23-42ee-93b0-8728b1cb7435"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WeaponsToggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9d7d6bbc-7cd0-4625-9860-dff3f4964bf7"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End_PlayAgain"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5640bad5-98d2-408a-830f-1b0a47f853d0"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End_PlayAgain"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dd21702d-7885-4c85-ab62-243518d230b9"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End_Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a1af0877-c592-4f69-8419-b4f10b1f8cc2"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End_Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""37a06416-6ac1-46b9-871f-bb390a6ab5a4"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End_Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5c8a7e0-57dd-48fe-b43c-80f6933758c7"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End_Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Menu"",
+            ""id"": ""deb687ae-310e-48a7-a7e6-97956967a035"",
+            ""actions"": [
+                {
+                    ""name"": ""Play"",
+                    ""type"": ""Button"",
+                    ""id"": ""848dcb5e-0b81-4d74-bc86-0a4ed70a5911"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""1d87beb3-9cf6-4b8a-8fb3-ae5dfd676edf"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""27398903-19c1-468d-ac55-90236195c20d"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b88307e1-5266-43f4-8ef7-94576c9c9fee"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e2b986ea-08cd-4a12-b886-86dfde4c28ee"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        }
+    ],
+    ""controlSchemes"": []
+}");
+        // InGame
+        m_InGame = asset.GetActionMap("InGame");
+        m_InGame_Movement = m_InGame.GetAction("Movement");
+        m_InGame_Aiming = m_InGame.GetAction("Aiming");
+        m_InGame_Shoot = m_InGame.GetAction("Shoot");
+        m_InGame_Block = m_InGame.GetAction("Block");
+        m_InGame_Pause = m_InGame.GetAction("Pause");
+        m_InGame_MovementToggle = m_InGame.GetAction("MovementToggle");
+        m_InGame_WeaponsToggle = m_InGame.GetAction("WeaponsToggle");
+        m_InGame_End_PlayAgain = m_InGame.GetAction("End_PlayAgain");
+        m_InGame_End_Menu = m_InGame.GetAction("End_Menu");
+        m_InGame_End_Quit = m_InGame.GetAction("End_Quit");
+        // Menu
+        m_Menu = asset.GetActionMap("Menu");
+        m_Menu_Play = m_Menu.GetAction("Play");
+        m_Menu_Quit = m_Menu.GetAction("Quit");
+    }
+
+    ~PlayerControls()
+    {
+        UnityEngine.Object.Destroy(asset);
+    }
+
+    public InputBinding? bindingMask
+    {
+        get => asset.bindingMask;
+        set => asset.bindingMask = value;
+    }
+
+    public ReadOnlyArray<InputDevice>? devices
+    {
+        get => asset.devices;
+        set => asset.devices = value;
+    }
+
+    public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
+
+    public bool Contains(InputAction action)
+    {
+        return asset.Contains(action);
+    }
+
+    public IEnumerator<InputAction> GetEnumerator()
+    {
+        return asset.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
+
+    public void Enable()
+    {
+        asset.Enable();
+    }
+
+    public void Disable()
+    {
+        asset.Disable();
+    }
+
+    // InGame
+    private readonly InputActionMap m_InGame;
+    private IInGameActions m_InGameActionsCallbackInterface;
+    private readonly InputAction m_InGame_Movement;
+    private readonly InputAction m_InGame_Aiming;
+    private readonly InputAction m_InGame_Shoot;
+    private readonly InputAction m_InGame_Block;
+    private readonly InputAction m_InGame_Pause;
+    private readonly InputAction m_InGame_MovementToggle;
+    private readonly InputAction m_InGame_WeaponsToggle;
+    private readonly InputAction m_InGame_End_PlayAgain;
+    private readonly InputAction m_InGame_End_Menu;
+    private readonly InputAction m_InGame_End_Quit;
+    public struct InGameActions
+    {
+        private PlayerControls m_Wrapper;
+        public InGameActions(PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_InGame_Movement;
+        public InputAction @Aiming => m_Wrapper.m_InGame_Aiming;
+        public InputAction @Shoot => m_Wrapper.m_InGame_Shoot;
+        public InputAction @Block => m_Wrapper.m_InGame_Block;
+        public InputAction @Pause => m_Wrapper.m_InGame_Pause;
+        public InputAction @MovementToggle => m_Wrapper.m_InGame_MovementToggle;
+        public InputAction @WeaponsToggle => m_Wrapper.m_InGame_WeaponsToggle;
+        public InputAction @End_PlayAgain => m_Wrapper.m_InGame_End_PlayAgain;
+        public InputAction @End_Menu => m_Wrapper.m_InGame_End_Menu;
+        public InputAction @End_Quit => m_Wrapper.m_InGame_End_Quit;
+        public InputActionMap Get() { return m_Wrapper.m_InGame; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(InGameActions set) { return set.Get(); }
+        public void SetCallbacks(IInGameActions instance)
+        {
+            if (m_Wrapper.m_InGameActionsCallbackInterface != null)
+            {
+                Movement.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnMovement;
+                Movement.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnMovement;
+                Movement.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnMovement;
+                Aiming.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnAiming;
+                Aiming.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnAiming;
+                Aiming.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnAiming;
+                Shoot.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnShoot;
+                Shoot.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnShoot;
+                Shoot.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnShoot;
+                Block.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnBlock;
+                Block.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnBlock;
+                Block.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnBlock;
+                Pause.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnPause;
+                Pause.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnPause;
+                Pause.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnPause;
+                MovementToggle.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnMovementToggle;
+                MovementToggle.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnMovementToggle;
+                MovementToggle.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnMovementToggle;
+                WeaponsToggle.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnWeaponsToggle;
+                WeaponsToggle.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnWeaponsToggle;
+                WeaponsToggle.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnWeaponsToggle;
+                End_PlayAgain.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_PlayAgain;
+                End_PlayAgain.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_PlayAgain;
+                End_PlayAgain.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_PlayAgain;
+                End_Menu.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_Menu;
+                End_Menu.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_Menu;
+                End_Menu.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_Menu;
+                End_Quit.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_Quit;
+                End_Quit.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_Quit;
+                End_Quit.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_Quit;
+            }
+            m_Wrapper.m_InGameActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                Movement.started += instance.OnMovement;
+                Movement.performed += instance.OnMovement;
+                Movement.canceled += instance.OnMovement;
+                Aiming.started += instance.OnAiming;
+                Aiming.performed += instance.OnAiming;
+                Aiming.canceled += instance.OnAiming;
+                Shoot.started += instance.OnShoot;
+                Shoot.performed += instance.OnShoot;
+                Shoot.canceled += instance.OnShoot;
+                Block.started += instance.OnBlock;
+                Block.performed += instance.OnBlock;
+                Block.canceled += instance.OnBlock;
+                Pause.started += instance.OnPause;
+                Pause.performed += instance.OnPause;
+                Pause.canceled += instance.OnPause;
+                MovementToggle.started += instance.OnMovementToggle;
+                MovementToggle.performed += instance.OnMovementToggle;
+                MovementToggle.canceled += instance.OnMovementToggle;
+                WeaponsToggle.started += instance.OnWeaponsToggle;
+                WeaponsToggle.performed += instance.OnWeaponsToggle;
+                WeaponsToggle.canceled += instance.OnWeaponsToggle;
+                End_PlayAgain.started += instance.OnEnd_PlayAgain;
+                End_PlayAgain.performed += instance.OnEnd_PlayAgain;
+                End_PlayAgain.canceled += instance.OnEnd_PlayAgain;
+                End_Menu.started += instance.OnEnd_Menu;
+                End_Menu.performed += instance.OnEnd_Menu;
+                End_Menu.canceled += instance.OnEnd_Menu;
+                End_Quit.started += instance.OnEnd_Quit;
+                End_Quit.performed += instance.OnEnd_Quit;
+                End_Quit.canceled += instance.OnEnd_Quit;
+            }
+        }
+    }
+    public InGameActions @InGame => new InGameActions(this);
+
+    // Menu
+    private readonly InputActionMap m_Menu;
+    private IMenuActions m_MenuActionsCallbackInterface;
+    private readonly InputAction m_Menu_Play;
+    private readonly InputAction m_Menu_Quit;
+    public struct MenuActions
+    {
+        private PlayerControls m_Wrapper;
+        public MenuActions(PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Play => m_Wrapper.m_Menu_Play;
+        public InputAction @Quit => m_Wrapper.m_Menu_Quit;
+        public InputActionMap Get() { return m_Wrapper.m_Menu; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
+        public void SetCallbacks(IMenuActions instance)
+        {
+            if (m_Wrapper.m_MenuActionsCallbackInterface != null)
+            {
+                Play.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay;
+                Play.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay;
+                Play.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay;
+                Quit.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnQuit;
+                Quit.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnQuit;
+                Quit.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnQuit;
+            }
+            m_Wrapper.m_MenuActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                Play.started += instance.OnPlay;
+                Play.performed += instance.OnPlay;
+                Play.canceled += instance.OnPlay;
+                Quit.started += instance.OnQuit;
+                Quit.performed += instance.OnQuit;
+                Quit.canceled += instance.OnQuit;
+            }
+        }
+    }
+    public MenuActions @Menu => new MenuActions(this);
+    public interface IInGameActions
+    {
+        void OnMovement(InputAction.CallbackContext context);
+        void OnAiming(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+        void OnBlock(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnMovementToggle(InputAction.CallbackContext context);
+        void OnWeaponsToggle(InputAction.CallbackContext context);
+        void OnEnd_PlayAgain(InputAction.CallbackContext context);
+        void OnEnd_Menu(InputAction.CallbackContext context);
+        void OnEnd_Quit(InputAction.CallbackContext context);
+    }
+    public interface IMenuActions
+    {
+        void OnPlay(InputAction.CallbackContext context);
+        void OnQuit(InputAction.CallbackContext context);
+    }
+}

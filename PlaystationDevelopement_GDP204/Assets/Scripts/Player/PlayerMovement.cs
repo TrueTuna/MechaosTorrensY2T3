@@ -2,30 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+
 
 public class PlayerMovement : MonoBehaviour
 {
+    // link to other scripts
     public PlayerHealthEnergy HealthEnergyScript;
     public PlayerShooting ShootingScript;
 
+    // on/off
     public bool movementEnabled;
+    public GameObject indicator;
+
+    // movespeed
     public float MoveSpeed = 1;
 
-    public GameObject indicator;
+    // drain
     private float drainRate = 0.5f; // how often to drain
     private float drainAmount = 5f; // how much to drain
     private float drainTime; // since recent drain
 
-    private Rigidbody rb;
+    // animator
     public Animator walkAnimator;
     public Animator EnableAnimator;
 
     // axis management
     private bool m_isAxisInUse = false;
 
+    // controls
+    PlayerControls controls;
+    Vector2 controlDirection;
+    
+
+    private void Awake()
+    {
+        controls = new PlayerControls();
+        controls.InGame.Enable();
+        controls.InGame.MovementToggle.performed += context => MovementToggle();
+        controls.InGame.Movement.performed += context => controlDirection = context.ReadValue<Vector2>();
+        controls.InGame.Movement.canceled += context => controlDirection = Vector2.zero;
+    }
+
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
         drainTime = 0;
         movementEnabled = false;
         HealthEnergyScript = gameObject.GetComponent<PlayerHealthEnergy>();
@@ -34,122 +54,55 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // enable and disable
-        if(Input.GetAxis("Trigger Movement") == 1)
-        {
-            if (m_isAxisInUse == false)
-            {                
-                // enable or disable
-                movementEnabled = checkForPress(movementEnabled);
-                // trigger animation
-                EnableAnimator.SetTrigger("Powering");
-                // block repeated fucntion activation
-                m_isAxisInUse = true;
-            }
-        }
-        else
-        {
-            // button is not pressed and therefore can be unset
-            m_isAxisInUse = false;
-        }
     }
+
 
     void FixedUpdate()
     {
         if(movementEnabled)
-        {
-            if (Input.mousePresent) // if a mouse is found
+        {            
+            // actual movement
+            if (!ShootingScript.shootingEnabled) // is the shooting script disabled?
             {
-                // actual movement
-                if (!ShootingScript.shootingEnabled)
-                {
-                    transform.position += new Vector3(0, 0, Input.GetAxis("Move Vertical") * MoveSpeed * Time.deltaTime) * 1.5f;
-                    transform.position += new Vector3(Input.GetAxis("Move Horizontal") * MoveSpeed * Time.deltaTime, 0, 0) * 1.5f;
-                }
-                else
-                {
-                    transform.position += new Vector3(0, 0, Input.GetAxis("Move Vertical") * MoveSpeed * Time.deltaTime);
-                    transform.position += new Vector3(Input.GetAxis("Move Horizontal") * MoveSpeed * Time.deltaTime, 0, 0);
-                }
+                transform.position += new Vector3(controlDirection.x * MoveSpeed * Time.deltaTime, 0, controlDirection.y * MoveSpeed * Time.deltaTime) * 1.5f;
+            }
+            else // if both are active
+            {
+                transform.position += new Vector3(controlDirection.x * MoveSpeed * Time.deltaTime, 0, controlDirection.y * MoveSpeed * Time.deltaTime);
+            }
 
-                // relaying axis to animator
-                if (Input.GetAxis("Move Horizontal") == 0)
+            // relaying axis to animator
+            if (controlDirection.x == 0)
+            {
+                switch (controlDirection.y)
                 {
-                    switch (Input.GetAxis("Move Vertical"))
-                    {
-                        case -1:
-                            walkAnimator.SetInteger("Direction", -1);
-                            break;
-                        case 0:
-                            walkAnimator.SetInteger("Direction", 0);
-                            break;
-                        case 1:
-                            walkAnimator.SetInteger("Direction", 1);
-                            break;
-                    }
-                }
-                else
-                {
-                    switch (Input.GetAxis("Move Horizontal"))
-                    {
-                        case -1:
-                            walkAnimator.SetInteger("Direction", -1);
-                            break;
-                        case 0:
-                            walkAnimator.SetInteger("Direction", 0);
-                            break;
-                        case 1:
-                            walkAnimator.SetInteger("Direction", 1);
-                            break;
-                    }
+                    case -1:
+                        walkAnimator.SetInteger("Direction", -1);
+                        break;
+                    case 0:
+                        walkAnimator.SetInteger("Direction", 0);
+                        break;
+                    case 1:
+                        walkAnimator.SetInteger("Direction", 1);
+                        break;
                 }
             }
-            else // you have a joystick
+            else
             {
-                // actual movement
-                if (!ShootingScript.shootingEnabled)
+                switch (controlDirection.x)
                 {
-                    transform.position += new Vector3(0, 0, Input.GetAxis("VerticalMoveJoystick") * MoveSpeed * Time.deltaTime) * 1.5f;
-                    transform.position += new Vector3(Input.GetAxis("HorizontalMoveJoystick") * MoveSpeed * Time.deltaTime, 0, 0) * 1.5f;
-                }
-                else
-                {
-                    transform.position += new Vector3(0, 0, Input.GetAxis("VerticalMoveJoystick") * MoveSpeed * Time.deltaTime);
-                    transform.position += new Vector3(Input.GetAxis("HorizontalMoveJoystick") * MoveSpeed * Time.deltaTime, 0, 0);
-                }
-
-                // relaying axis to animator
-                if (Input.GetAxis("HorizontalMoveJoystick") == 0)
-                {
-                    switch (Input.GetAxis("VerticalMoveJoystick"))
-                    {
-                        case -1:
-                            walkAnimator.SetInteger("Direction", -1);
-                            break;
-                        case 0:
-                            walkAnimator.SetInteger("Direction", 0);
-                            break;
-                        case 1:
-                            walkAnimator.SetInteger("Direction", 1);
-                            break;
-                    }
-                }
-                else
-                {
-                    switch (Input.GetAxis("HorizontalMoveJoystick"))
-                    {
-                        case -1:
-                            walkAnimator.SetInteger("Direction", -1);
-                            break;
-                        case 0:
-                            walkAnimator.SetInteger("Direction", 0);
-                            break;
-                        case 1:
-                            walkAnimator.SetInteger("Direction", 1);
-                            break;
-                    }
+                    case -1:
+                        walkAnimator.SetInteger("Direction", -1);
+                        break;
+                    case 0:
+                        walkAnimator.SetInteger("Direction", 0);
+                        break;
+                    case 1:
+                        walkAnimator.SetInteger("Direction", 1);
+                        break;
                 }
             }
+            
 
 
 
@@ -172,6 +125,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // toggle control
+    void MovementToggle()
+    {
+        // enable or disable
+        movementEnabled = checkForPress(movementEnabled);
+        // trigger animation
+        EnableAnimator.SetTrigger("Powering");
+        // block repeated fucntion activation
+        //m_isAxisInUse = true;
+    }
+    // flip flop
     bool checkForPress (bool boolean)
     {
         if(boolean)
@@ -185,4 +149,6 @@ public class PlayerMovement : MonoBehaviour
         // if all else fails
         return true;
     }
+
+
 }
