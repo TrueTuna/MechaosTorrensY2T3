@@ -27,12 +27,13 @@ public class PlayerMovement : MonoBehaviour
     public Animator walkAnimator;
     public Animator EnableAnimator;
 
-    // axis management
-    private bool m_isAxisInUse = false;
-
     // controls
     PlayerControls controls;
     Vector2 controlDirection;
+    private bool wPressed;
+    private bool aPressed;
+    private bool sPressed;
+    private bool dPressed;
     
 
     private void Awake()
@@ -42,6 +43,16 @@ public class PlayerMovement : MonoBehaviour
         controls.InGame.MovementToggle.performed += context => MovementToggle();
         controls.InGame.Movement.performed += context => controlDirection = context.ReadValue<Vector2>();
         controls.InGame.Movement.canceled += context => controlDirection = Vector2.zero;
+
+        // WASD
+        controls.InGame.KeyboardUp.performed += context => wPressed = true;
+        controls.InGame.KeyboardUp.canceled += context => wPressed = false;
+        controls.InGame.KeyboardLeft.performed += context => aPressed = true;
+        controls.InGame.KeyboardLeft.canceled += context => aPressed = false;
+        controls.InGame.KeyboardDown.performed += context => sPressed = true;
+        controls.InGame.KeyboardDown.canceled += context => sPressed = false;
+        controls.InGame.KeyboardRight.performed += context => dPressed = true;
+        controls.InGame.KeyboardRight.canceled += context => dPressed = false;
     }
 
     void Start()
@@ -69,6 +80,24 @@ public class PlayerMovement : MonoBehaviour
             else // if both are active
             {
                 transform.position += new Vector3(controlDirection.x * MoveSpeed * Time.deltaTime, 0, controlDirection.y * MoveSpeed * Time.deltaTime);
+            }
+
+            // keyboard movement for the sake of movement
+            if (wPressed)
+            {
+                transform.position += new Vector3(0, 0, MoveSpeed * Time.deltaTime);
+            }
+            if (aPressed)
+            {
+                transform.position += new Vector3(-MoveSpeed * Time.deltaTime, 0, 0);
+            }
+            if (sPressed)
+            {
+                transform.position += new Vector3(0, 0, -MoveSpeed * Time.deltaTime);
+            }
+            if (dPressed)
+            {                
+                transform.position += new Vector3(MoveSpeed * Time.deltaTime, 0, 0);
             }
 
             // relaying axis to animator
@@ -103,9 +132,6 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
             
-
-
-
             // locking y axis
             transform.position = new Vector3(transform.position.x, 1, transform.position.z);
 
@@ -132,8 +158,6 @@ public class PlayerMovement : MonoBehaviour
         movementEnabled = checkForPress(movementEnabled);
         // trigger animation
         EnableAnimator.SetTrigger("Powering");
-        // block repeated fucntion activation
-        //m_isAxisInUse = true;
     }
     // flip flop
     bool checkForPress (bool boolean)

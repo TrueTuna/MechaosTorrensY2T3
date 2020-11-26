@@ -22,7 +22,6 @@ public class MeleeDamageBall : MonoBehaviour
             if (other.CompareTag("Enemy"))
             {
                 other.GetComponent<EnemyHealth>().health -= damage;
-                Destroy(gameObject);
             }
         }
         else
@@ -31,7 +30,6 @@ public class MeleeDamageBall : MonoBehaviour
             if (other.CompareTag("Player"))
             {
                 other.GetComponent<PlayerHealthEnergy>().health -= damage;
-                Destroy(gameObject);
             }
         }
     }

@@ -1,0 +1,18 @@
+
+MENU:
+
+- the X button should skip the menu to the first level
+
+GAMEPLAY:
+
+- left joystick - movement
+- left bumper - enable/disable movement
+- left trigger - block
+
+- right joystick - aiming direction
+- right bumper - enable/disable weapons
+- right trigger - shoot
+
+- up button - restart
+- left button - menu
+- down button - quit? if it works

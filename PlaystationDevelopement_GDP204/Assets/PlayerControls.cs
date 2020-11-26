@@ -96,13 +96,64 @@ public class PlayerControls : IInputActionCollection
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""KeyboardUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""0e831705-1164-482b-8b27-2c11fffa81bf"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""KeyboardLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""c2399db9-f1ee-4f99-955a-5186b1538296"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""KeyboardDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""d8d51004-5b41-4505-8bdc-45882f821a81"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""KeyboardRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""2c7dcda4-1e4f-419e-815b-a29f0fe907b3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""OffensiveAbility1"",
+                    ""type"": ""Button"",
+                    ""id"": ""1033f94e-5228-4817-a693-af23b97751dd"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""985ef7c1-c4a0-4612-801b-01928d4c068a"",
-                    ""path"": ""<Gamepad>/leftStick"",
+                    ""path"": ""<PS4DualShockGamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""07015f60-5c05-400f-b41b-09f9ce505331"",
+                    ""path"": ""<DualShockGamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -113,7 +164,18 @@ public class PlayerControls : IInputActionCollection
                 {
                     ""name"": """",
                     ""id"": ""cb9786cd-f2d5-4fd9-b2b1-7ad28633bd84"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""path"": ""<PS4DualShockGamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aiming"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b476962a-debe-4676-894d-220015453ea8"",
+                    ""path"": ""<DualShockGamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -135,7 +197,18 @@ public class PlayerControls : IInputActionCollection
                 {
                     ""name"": """",
                     ""id"": ""32cfc903-971b-4077-aeab-9daab1b12833"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""path"": ""<PS4DualShockGamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fd95b935-ebdb-4382-bccc-bb1252ae3b5d"",
+                    ""path"": ""<DualShockGamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -157,7 +230,18 @@ public class PlayerControls : IInputActionCollection
                 {
                     ""name"": """",
                     ""id"": ""ee93ea73-7324-42c7-a2b4-f7cd0485dd91"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""path"": ""<PS4DualShockGamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""db2ef37d-b4da-4f10-b540-df2fc25ae5eb"",
+                    ""path"": ""<DualShockGamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -178,6 +262,28 @@ public class PlayerControls : IInputActionCollection
                 },
                 {
                     ""name"": """",
+                    ""id"": ""f79aa92f-f418-4daf-a173-9d6c3304ad2a"",
+                    ""path"": ""<PS4DualShockGamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c41eb56-3a9a-4943-a4c9-7fa7df04fb24"",
+                    ""path"": ""<DualShockGamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""a857f9a7-ae60-4ed2-8659-bf9a6b7e83bb"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
@@ -189,19 +295,19 @@ public class PlayerControls : IInputActionCollection
                 },
                 {
                     ""name"": """",
-                    ""id"": ""f79aa92f-f418-4daf-a173-9d6c3304ad2a"",
-                    ""path"": ""<Gamepad>/select"",
+                    ""id"": ""1285e785-e8e0-4cf0-a59d-46ca25098d51"",
+                    ""path"": ""<PS4DualShockGamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pause"",
+                    ""action"": ""MovementToggle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1285e785-e8e0-4cf0-a59d-46ca25098d51"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""id"": ""f512a039-a95f-452b-8510-ffc64c9b5cd7"",
+                    ""path"": ""<DualShockGamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -223,7 +329,18 @@ public class PlayerControls : IInputActionCollection
                 {
                     ""name"": """",
                     ""id"": ""be8922e6-bdf4-478d-ae42-366dff7189da"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""path"": ""<PS4DualShockGamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WeaponsToggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9350424c-45fe-4261-8ab1-6ff8b07aee24"",
+                    ""path"": ""<DualShockGamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -245,7 +362,18 @@ public class PlayerControls : IInputActionCollection
                 {
                     ""name"": """",
                     ""id"": ""9d7d6bbc-7cd0-4625-9860-dff3f4964bf7"",
-                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""path"": ""<PS4DualShockGamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End_PlayAgain"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8dd1a928-eeb8-477a-a994-7f91184ab8c3"",
+                    ""path"": ""<DualShockGamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -267,7 +395,18 @@ public class PlayerControls : IInputActionCollection
                 {
                     ""name"": """",
                     ""id"": ""dd21702d-7885-4c85-ab62-243518d230b9"",
-                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""path"": ""<PS4DualShockGamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End_Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d1b90f0c-812e-4f94-93c3-0bcad4f445a9"",
+                    ""path"": ""<DualShockGamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -289,7 +428,18 @@ public class PlayerControls : IInputActionCollection
                 {
                     ""name"": """",
                     ""id"": ""37a06416-6ac1-46b9-871f-bb390a6ab5a4"",
-                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""path"": ""<PS4DualShockGamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""End_Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4c93deab-463e-4b71-b03b-f06328c32eb7"",
+                    ""path"": ""<DualShockGamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -305,6 +455,83 @@ public class PlayerControls : IInputActionCollection
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""End_Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f6f3aeee-bfe2-41dc-ae69-a2c2796c9b8c"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ce7573df-988d-4b72-9038-5fd380cafc41"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""28fe42d3-ae1d-4496-8354-c274ddbca02d"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bb7b8b23-de9a-4924-898c-6a7bc16d88bb"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7de2d859-cbb7-4401-9e3c-46241337b62e"",
+                    ""path"": ""<PS4DualShockGamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OffensiveAbility1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8907f3e7-3795-4fe1-babd-5f19293e7dae"",
+                    ""path"": ""<DualShockGamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OffensiveAbility1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2f8989c4-d6d1-482f-93d5-a5c9a9c08bd3"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OffensiveAbility1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -335,7 +562,18 @@ public class PlayerControls : IInputActionCollection
                 {
                     ""name"": """",
                     ""id"": ""27398903-19c1-468d-ac55-90236195c20d"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<PS4DualShockGamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39ff1815-bdb9-4346-8ed5-fc1605bfe0ee"",
+                    ""path"": ""<DualShockGamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -382,6 +620,11 @@ public class PlayerControls : IInputActionCollection
         m_InGame_End_PlayAgain = m_InGame.GetAction("End_PlayAgain");
         m_InGame_End_Menu = m_InGame.GetAction("End_Menu");
         m_InGame_End_Quit = m_InGame.GetAction("End_Quit");
+        m_InGame_KeyboardUp = m_InGame.GetAction("KeyboardUp");
+        m_InGame_KeyboardLeft = m_InGame.GetAction("KeyboardLeft");
+        m_InGame_KeyboardDown = m_InGame.GetAction("KeyboardDown");
+        m_InGame_KeyboardRight = m_InGame.GetAction("KeyboardRight");
+        m_InGame_OffensiveAbility1 = m_InGame.GetAction("OffensiveAbility1");
         // Menu
         m_Menu = asset.GetActionMap("Menu");
         m_Menu_Play = m_Menu.GetAction("Play");
@@ -445,6 +688,11 @@ public class PlayerControls : IInputActionCollection
     private readonly InputAction m_InGame_End_PlayAgain;
     private readonly InputAction m_InGame_End_Menu;
     private readonly InputAction m_InGame_End_Quit;
+    private readonly InputAction m_InGame_KeyboardUp;
+    private readonly InputAction m_InGame_KeyboardLeft;
+    private readonly InputAction m_InGame_KeyboardDown;
+    private readonly InputAction m_InGame_KeyboardRight;
+    private readonly InputAction m_InGame_OffensiveAbility1;
     public struct InGameActions
     {
         private PlayerControls m_Wrapper;
@@ -459,6 +707,11 @@ public class PlayerControls : IInputActionCollection
         public InputAction @End_PlayAgain => m_Wrapper.m_InGame_End_PlayAgain;
         public InputAction @End_Menu => m_Wrapper.m_InGame_End_Menu;
         public InputAction @End_Quit => m_Wrapper.m_InGame_End_Quit;
+        public InputAction @KeyboardUp => m_Wrapper.m_InGame_KeyboardUp;
+        public InputAction @KeyboardLeft => m_Wrapper.m_InGame_KeyboardLeft;
+        public InputAction @KeyboardDown => m_Wrapper.m_InGame_KeyboardDown;
+        public InputAction @KeyboardRight => m_Wrapper.m_InGame_KeyboardRight;
+        public InputAction @OffensiveAbility1 => m_Wrapper.m_InGame_OffensiveAbility1;
         public InputActionMap Get() { return m_Wrapper.m_InGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -498,6 +751,21 @@ public class PlayerControls : IInputActionCollection
                 End_Quit.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_Quit;
                 End_Quit.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_Quit;
                 End_Quit.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnEnd_Quit;
+                KeyboardUp.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardUp;
+                KeyboardUp.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardUp;
+                KeyboardUp.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardUp;
+                KeyboardLeft.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardLeft;
+                KeyboardLeft.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardLeft;
+                KeyboardLeft.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardLeft;
+                KeyboardDown.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardDown;
+                KeyboardDown.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardDown;
+                KeyboardDown.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardDown;
+                KeyboardRight.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardRight;
+                KeyboardRight.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardRight;
+                KeyboardRight.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnKeyboardRight;
+                OffensiveAbility1.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnOffensiveAbility1;
+                OffensiveAbility1.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnOffensiveAbility1;
+                OffensiveAbility1.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnOffensiveAbility1;
             }
             m_Wrapper.m_InGameActionsCallbackInterface = instance;
             if (instance != null)
@@ -532,6 +800,21 @@ public class PlayerControls : IInputActionCollection
                 End_Quit.started += instance.OnEnd_Quit;
                 End_Quit.performed += instance.OnEnd_Quit;
                 End_Quit.canceled += instance.OnEnd_Quit;
+                KeyboardUp.started += instance.OnKeyboardUp;
+                KeyboardUp.performed += instance.OnKeyboardUp;
+                KeyboardUp.canceled += instance.OnKeyboardUp;
+                KeyboardLeft.started += instance.OnKeyboardLeft;
+                KeyboardLeft.performed += instance.OnKeyboardLeft;
+                KeyboardLeft.canceled += instance.OnKeyboardLeft;
+                KeyboardDown.started += instance.OnKeyboardDown;
+                KeyboardDown.performed += instance.OnKeyboardDown;
+                KeyboardDown.canceled += instance.OnKeyboardDown;
+                KeyboardRight.started += instance.OnKeyboardRight;
+                KeyboardRight.performed += instance.OnKeyboardRight;
+                KeyboardRight.canceled += instance.OnKeyboardRight;
+                OffensiveAbility1.started += instance.OnOffensiveAbility1;
+                OffensiveAbility1.performed += instance.OnOffensiveAbility1;
+                OffensiveAbility1.canceled += instance.OnOffensiveAbility1;
             }
         }
     }
@@ -589,6 +872,11 @@ public class PlayerControls : IInputActionCollection
         void OnEnd_PlayAgain(InputAction.CallbackContext context);
         void OnEnd_Menu(InputAction.CallbackContext context);
         void OnEnd_Quit(InputAction.CallbackContext context);
+        void OnKeyboardUp(InputAction.CallbackContext context);
+        void OnKeyboardLeft(InputAction.CallbackContext context);
+        void OnKeyboardDown(InputAction.CallbackContext context);
+        void OnKeyboardRight(InputAction.CallbackContext context);
+        void OnOffensiveAbility1(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {

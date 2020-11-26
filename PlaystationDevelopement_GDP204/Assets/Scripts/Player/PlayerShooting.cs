@@ -18,17 +18,24 @@ public class PlayerShooting : MonoBehaviour
     public GameObject BulletPreset;
     public GameObject PlayersShield;
     public GameObject GunSprite;
+    public GameObject BombObject;
     
     // bullet's variables
     public Transform BulletSpawn;
     public float firingRate = 0.5f; // how often to shoot
-    public float firingTimer; // time since last shot
+    private float firingTimer; // time since last shot
     public float bulletDamage = 10;
     public float bulletSpeed = 40;
 
+
+    // bomb ability
+    private float bombDamage = 70;
+    public float offensiveAbility1cd = 4;
+    private float offensiveAbility1Timer;
+
     // direction
     private Vector3 mousePosition;
-    private Quaternion direction;
+    private Quaternion aimDirection;
 
     // animator
     public Animator shieldAnimator;
@@ -56,7 +63,8 @@ public class PlayerShooting : MonoBehaviour
         // gun firing
         controls.InGame.Shoot.performed += context => controlFiring = true;
         controls.InGame.Shoot.canceled += context => controlFiring = false;
-
+        // bomb spawn
+        controls.InGame.OffensiveAbility1.performed += context => SpawnBomb();
     }
 
     void Start()
@@ -64,22 +72,16 @@ public class PlayerShooting : MonoBehaviour
         firingTimer = 0;
         HealthEnergyScript = gameObject.GetComponent<PlayerHealthEnergy>();
         MovementScript = gameObject.GetComponent<PlayerMovement>();
+        offensiveAbility1Timer = 0;
     }
 
     private void Update()
     {
         firingTimer += Time.deltaTime;
+        offensiveAbility1Timer += Time.deltaTime;
 
-        // aiming inputs
-        direction = Quaternion.LookRotation(
-            new Vector3(
-                transform.position.x + (10 * controlDirection.x), 
-                transform.position.y, 
-                transform.position.z + (10 * controlDirection.y)), 
-            transform.up);
-        
         // indicator colour
-        if(shootingEnabled)
+        if (shootingEnabled)
         { 
             indicator.GetComponent<Image>().color = new Color(0.6f, 1.0f, 0.0f);
         }
@@ -88,16 +90,22 @@ public class PlayerShooting : MonoBehaviour
             indicator.GetComponent<Image>().color = new Color(1.0f, 0.1f, 0.0f);
         }
 
+        // aiming inputs
+        Vector3 direction = new Vector3(transform.position.x + (controlDirection.x), transform.position.y, transform.position.z + (controlDirection.y));
+
         // gun sprite facing direction
-        Quaternion gunSpriteRot = direction;
-        if(gunSpriteRot.eulerAngles.y < 0 || gunSpriteRot.eulerAngles.y >= 180)
-            gunSpriteRot.eulerAngles += new Vector3(-90,-90, 0);
-        else
-            gunSpriteRot.eulerAngles += new Vector3(90,-90,0);
-        GunSprite.transform.rotation = gunSpriteRot;
+        //Quaternion gunSpriteRot = direction;
+        //if(gunSpriteRot.eulerAngles.y < 0 || gunSpriteRot.eulerAngles.y >= 180)
+        //    gunSpriteRot.eulerAngles += new Vector3(-90,-90, 0);
+        //else
+        //    gunSpriteRot.eulerAngles += new Vector3(90,-90,0);
+
+        aimDirection = Quaternion.LookRotation(direction);
+        GunSprite.transform.rotation = aimDirection;
+        GunSprite.transform.eulerAngles = new Vector3(90, GunSprite.transform.eulerAngles.y - 90, GunSprite.transform.eulerAngles.z);
 
         // firing gun
-        if(controlFiring)
+        if (controlFiring)
         {
             WeaponFiring();
         }
@@ -112,7 +120,7 @@ public class PlayerShooting : MonoBehaviour
         {
             shieldAnimator.SetBool("ShieldOn", true);
             PlayersShield.SetActive(true);
-            PlayersShield.transform.rotation = direction;
+            PlayersShield.transform.rotation = aimDirection;
             HealthEnergyScript.energy -= 10 * Time.deltaTime;
         }
         else if (shieldAnimator.GetCurrentAnimatorStateInfo(0).IsName("ShieldHold") || shieldAnimator.GetCurrentAnimatorStateInfo(0).IsName("ShieldOff"))
@@ -132,7 +140,7 @@ public class PlayerShooting : MonoBehaviour
         if (shootingEnabled && firingTimer >= firingRate)
         {
             // create bullet and set its varaibles
-            GameObject i = Instantiate(BulletPreset, BulletSpawn.position, direction) as GameObject;
+            GameObject i = Instantiate(BulletPreset, BulletSpawn.position, aimDirection) as GameObject;
             BulletStuff bullet = i.GetComponent<BulletStuff>();
             bullet._ALLIED_ = true;
 
@@ -177,5 +185,15 @@ public class PlayerShooting : MonoBehaviour
         }
         // if all else fails
         return true;
+    }
+
+    void SpawnBomb()
+    {
+        if(offensiveAbility1Timer > offensiveAbility1cd)
+        {
+            GameObject i = Instantiate(BombObject, BulletSpawn.position, aimDirection) as GameObject;
+            HealthEnergyScript.energy -= 50;
+            offensiveAbility1Timer = 0;
+        }
     }
 }
