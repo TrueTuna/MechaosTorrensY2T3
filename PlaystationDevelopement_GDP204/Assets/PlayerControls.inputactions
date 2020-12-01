@@ -173,7 +173,7 @@
                 },
                 {
                     "name": "",
-                    "id": "ef76c369-2a38-47b6-abf8-481be6aa2269",
+                    "id": "3b5415a4-afc5-4062-8497-0a43011f1902",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
@@ -530,9 +530,33 @@
             "id": "deb687ae-310e-48a7-a7e6-97956967a035",
             "actions": [
                 {
-                    "name": "Play",
+                    "name": "Play1",
                     "type": "Button",
                     "id": "848dcb5e-0b81-4d74-bc86-0a4ed70a5911",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Play2",
+                    "type": "Button",
+                    "id": "4c717074-6018-4a8b-8958-524a0d65d610",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Play3",
+                    "type": "Button",
+                    "id": "608d4cf7-ea3b-4249-aed4-bbcc121568a5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Controls",
+                    "type": "Button",
+                    "id": "07043d1d-359d-440e-b185-8a19c37b2075",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
@@ -549,12 +573,78 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "27398903-19c1-468d-ac55-90236195c20d",
-                    "path": "<PS4DualShockGamepad>/buttonSouth",
+                    "id": "b88307e1-5266-43f4-8ef7-94576c9c9fee",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Play",
+                    "action": "Play1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "758c9b7e-5202-4b3c-a17a-8b7fd7be09f8",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Play2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "19cd8714-8c56-4f3c-9e36-880951fc6210",
+                    "path": "<DualShockGamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Play2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f02dd7e-dbf1-4b21-8d12-3f3287fdb576",
+                    "path": "<PS4DualShockGamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Play2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b7dd6e62-838a-4906-9e84-de6bd4bca93d",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Play3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a318a7be-d2a2-4723-8ccc-0c6854ecdb3f",
+                    "path": "<DualShockGamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Play3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "429c6242-edc5-434a-b6a8-fc771afd67c5",
+                    "path": "<PS4DualShockGamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Play3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -565,18 +655,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Play",
+                    "action": "Play1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "b88307e1-5266-43f4-8ef7-94576c9c9fee",
-                    "path": "<Keyboard>/space",
+                    "id": "27398903-19c1-468d-ac55-90236195c20d",
+                    "path": "<PS4DualShockGamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Play",
+                    "action": "Play1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -588,6 +678,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8b2834ff-3416-4ab8-bf96-c07169d6e5de",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Controls",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f75a0474-0d41-4de0-8bd1-4e874585c543",
+                    "path": "<DualShockGamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Controls",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bfd800de-c078-4cbb-9325-1385775285fd",
+                    "path": "<PS4DualShockGamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Controls",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

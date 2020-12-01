@@ -19,6 +19,7 @@ public class PlayerShooting : MonoBehaviour
     public GameObject PlayersShield;
     public GameObject GunSprite;
     public GameObject BombObject;
+    public GameObject directionMarker;
     
     // bullet's variables
     public Transform BulletSpawn;
@@ -80,6 +81,7 @@ public class PlayerShooting : MonoBehaviour
         firingTimer += Time.deltaTime;
         offensiveAbility1Timer += Time.deltaTime;
 
+
         // indicator colour
         if (shootingEnabled)
         { 
@@ -91,7 +93,8 @@ public class PlayerShooting : MonoBehaviour
         }
 
         // aiming inputs
-        Vector3 direction = new Vector3(transform.position.x + (controlDirection.x), transform.position.y, transform.position.z + (controlDirection.y));
+        Vector3 direction = new Vector3(controlDirection.x * 100, transform.position.y,controlDirection.y * 100);
+        directionMarker.transform.position = direction;
 
         // gun sprite facing direction
         //Quaternion gunSpriteRot = direction;
@@ -189,7 +192,7 @@ public class PlayerShooting : MonoBehaviour
 
     void SpawnBomb()
     {
-        if(offensiveAbility1Timer > offensiveAbility1cd)
+        if(offensiveAbility1Timer > offensiveAbility1cd && shootingEnabled == true)
         {
             GameObject i = Instantiate(BombObject, BulletSpawn.position, aimDirection) as GameObject;
             HealthEnergyScript.energy -= 50;

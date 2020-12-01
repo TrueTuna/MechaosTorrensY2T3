@@ -15,6 +15,9 @@ public class PlayerHealthEnergy : MonoBehaviour
     public Slider EnergyBarRight;
     public Slider EnergyBarleft;
     private float energyChange;
+    private float healthChange;
+    public RawImage bloodEffect;
+    private float colorValue;
 
     // linking to other scripts
     public PlayerShooting shootingScript;
@@ -26,6 +29,8 @@ public class PlayerHealthEnergy : MonoBehaviour
         energy = MAX_ENERGY;
         shootingScript = gameObject.GetComponent<PlayerShooting>();
         movementScript = gameObject.GetComponent<PlayerMovement>();
+        bloodEffect.color = new Color(0, 0, 0, 0);
+        colorValue = 0;
     }
 
     void Update()
@@ -42,5 +47,20 @@ public class PlayerHealthEnergy : MonoBehaviour
             shootingScript.shootingEnabled = false;
             movementScript.movementEnabled = false;
         }
+
+        if(health != healthChange)
+        {
+            colorValue = 0.3f;
+            if (health == 0)
+            {
+                colorValue = 0.0f;
+            }
+        }
+
+        colorValue -= Time.deltaTime / 2;
+        bloodEffect.color = new Color(1, 0, 0, colorValue);
+
+
+        healthChange = health;
     }
 }

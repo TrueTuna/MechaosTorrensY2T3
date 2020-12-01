@@ -27,19 +27,24 @@ public class ButtonActions : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
+    }
 
+    public void PlayLevel2()
+    {
+        SceneManager.LoadScene(2);
+        Time.timeScale = 1f;
+    }
+
+    public void PlayLevel3()
+    {
+        SceneManager.LoadScene(3);
+        Time.timeScale = 1f;
     }
 
     public void Instructions()
     {
         main.SetActive(false);
         instructions.SetActive(true);
-    }
-
-    public void Options()
-    {
-        main.SetActive(false);
-        options.SetActive(true);
     }
 
     public void Back()

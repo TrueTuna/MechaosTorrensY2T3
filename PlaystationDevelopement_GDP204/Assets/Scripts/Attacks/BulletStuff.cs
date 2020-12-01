@@ -32,6 +32,7 @@ public class BulletStuff : MonoBehaviour
     void FixedUpdate() // physics stuff
     {
         transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+        transform.position = new Vector3(transform.position.x, 1, transform.position.z);
     }
 
     private void OnTriggerEnter(Collider other) // collision

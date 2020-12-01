@@ -10,6 +10,7 @@ public class WaveSpawner : MonoBehaviour
     public int waveEnemyAmount;
     private float waveSpacer = 5;
     public float waveSpacerTimer = 0;
+    public int difficulty = 0;
     //UI
     public GameObject countdownBox;
     public TMPro.TextMeshProUGUI countdown;
@@ -44,7 +45,7 @@ public class WaveSpawner : MonoBehaviour
                 }
                 // these run once
                 waveSpacerTimer = 0;
-                waveEnemyAmount += 3;
+                waveEnemyAmount += 3 + difficulty;
                 currentWave += 1;
             }
             else

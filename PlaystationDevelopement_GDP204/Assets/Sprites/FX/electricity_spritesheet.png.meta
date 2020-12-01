@@ -1,0 +1,452 @@
+fileFormatVersion: 2
+guid: 323335fcf39bdac498da79caff014f59
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6463313737238773351
+    second: electricity_spritesheet_0
+  - first:
+      213: 7030257830761259751
+    second: electricity_spritesheet_1
+  - first:
+      213: 8775124327114753876
+    second: electricity_spritesheet_2
+  - first:
+      213: -6040729800962205102
+    second: electricity_spritesheet_3
+  - first:
+      213: -3528267981873448788
+    second: electricity_spritesheet_4
+  - first:
+      213: 6478997215922215799
+    second: electricity_spritesheet_5
+  - first:
+      213: 5689545623221259310
+    second: electricity_spritesheet_6
+  - first:
+      213: -4680886094252726086
+    second: electricity_spritesheet_7
+  - first:
+      213: 9139429869790891809
+    second: electricity_spritesheet_8
+  - first:
+      213: -4211884172859411107
+    second: electricity_spritesheet_9
+  - first:
+      213: 3736405514318164933
+    second: electricity_spritesheet_10
+  - first:
+      213: -4502862848266086870
+    second: electricity_spritesheet_11
+  - first:
+      213: 4892945741577021653
+    second: electricity_spritesheet_12
+  - first:
+      213: -3973911147447383274
+    second: electricity_spritesheet_13
+  - first:
+      213: 6490793402408759322
+    second: electricity_spritesheet_14
+  - first:
+      213: 3291471769773575602
+    second: electricity_spritesheet_15
+  - first:
+      213: -7440852813448861463
+    second: electricity_spritesheet_16
+  - first:
+      213: 1030514098575408227
+    second: electricity_spritesheet_17
+  - first:
+      213: 7217410018346264632
+    second: electricity_spritesheet_18
+  - first:
+      213: 8385263640575929348
+    second: electricity_spritesheet_19
+  - first:
+      213: 2296531288580441403
+    second: electricity_spritesheet_20
+  - first:
+      213: -775987845789769357
+    second: electricity_spritesheet_21
+  - first:
+      213: 2820963565294326547
+    second: electricity_spritesheet_22
+  - first:
+      213: 3415453674023450675
+    second: electricity_spritesheet_23
+  - first:
+      213: -1499837154251170476
+    second: electricity_spritesheet_24
+  - first:
+      213: 7900870588954831203
+    second: electricity_spritesheet_25
+  - first:
+      213: 3463971210774691674
+    second: electricity_spritesheet_26
+  - first:
+      213: 718276704927993658
+    second: electricity_spritesheet_27
+  - first:
+      213: 7242995537918188867
+    second: electricity_spritesheet_28
+  - first:
+      213: 5662665818857345506
+    second: electricity_spritesheet_29
+  - first:
+      213: -1749503140064150175
+    second: electricity_spritesheet_30
+  - first:
+      213: 7603442777714432476
+    second: electricity_spritesheet_31
+  - first:
+      213: -7678275974287274772
+    second: electricity_spritesheet_32
+  - first:
+      213: 3521991246013175259
+    second: electricity_spritesheet_33
+  - first:
+      213: 3805284365762560302
+    second: electricity_spritesheet_34
+  - first:
+      213: -8979128457267107234
+    second: electricity_spritesheet_35
+  - first:
+      213: 4760096502546754076
+    second: electricity_spritesheet_0
+  - first:
+      213: -1396494110553980253
+    second: electricity_spritesheet_1
+  - first:
+      213: -3044230886494846640
+    second: electricity_spritesheet_2
+  - first:
+      213: 8904672162274776303
+    second: electricity_spritesheet_3
+  - first:
+      213: 2119772658303592743
+    second: electricity_spritesheet_4
+  - first:
+      213: -985630146753471082
+    second: electricity_spritesheet_5
+  - first:
+      213: -4067916051493964915
+    second: electricity_spritesheet_6
+  - first:
+      213: -5969126155843479960
+    second: electricity_spritesheet_7
+  - first:
+      213: 5778873127882197665
+    second: electricity_spritesheet_8
+  - first:
+      213: -3371294500224737177
+    second: electricity_spritesheet_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: electricity_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ae0ea8c824f0240800000000000000
+      internalID: 4760096502546754076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a241816108ae9ce0800000000000000
+      internalID: -1396494110553980253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051c3344328b0c5d0800000000000000
+      internalID: -3044230886494846640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe492b11720c39b70800000000000000
+      internalID: 8904672162274776303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72965ce6002fa6d10800000000000000
+      internalID: 2119772658303592743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69dd7d68a965252f0800000000000000
+      internalID: -985630146753471082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83b79667ebdb87c0800000000000000
+      internalID: -4067916051493964915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866d4751367692da0800000000000000
+      internalID: -5969126155843479960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa0875fd7ea23050800000000000000
+      internalID: 5778873127882197665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76060e09381c631d0800000000000000
+      internalID: -3371294500224737177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a29e9a9c56b49f64a86631209adb5832
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

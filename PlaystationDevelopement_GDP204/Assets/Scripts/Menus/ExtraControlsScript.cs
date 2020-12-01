@@ -53,7 +53,8 @@ public class ExtraControlsScript : MonoBehaviour
 
     void End_PlayAgain()
     {
-        SceneManager.LoadScene(1);
+        int index = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index);
     }
     void End_Menu()
     {

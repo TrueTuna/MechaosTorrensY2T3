@@ -185,7 +185,7 @@ public class PlayerControls : IInputActionCollection
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ef76c369-2a38-47b6-abf8-481be6aa2269"",
+                    ""id"": ""3b5415a4-afc5-4062-8497-0a43011f1902"",
                     ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -542,9 +542,33 @@ public class PlayerControls : IInputActionCollection
             ""id"": ""deb687ae-310e-48a7-a7e6-97956967a035"",
             ""actions"": [
                 {
-                    ""name"": ""Play"",
+                    ""name"": ""Play1"",
                     ""type"": ""Button"",
                     ""id"": ""848dcb5e-0b81-4d74-bc86-0a4ed70a5911"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Play2"",
+                    ""type"": ""Button"",
+                    ""id"": ""4c717074-6018-4a8b-8958-524a0d65d610"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Play3"",
+                    ""type"": ""Button"",
+                    ""id"": ""608d4cf7-ea3b-4249-aed4-bbcc121568a5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Controls"",
+                    ""type"": ""Button"",
+                    ""id"": ""07043d1d-359d-440e-b185-8a19c37b2075"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -561,12 +585,78 @@ public class PlayerControls : IInputActionCollection
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""27398903-19c1-468d-ac55-90236195c20d"",
-                    ""path"": ""<PS4DualShockGamepad>/buttonSouth"",
+                    ""id"": ""b88307e1-5266-43f4-8ef7-94576c9c9fee"",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Play"",
+                    ""action"": ""Play1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""758c9b7e-5202-4b3c-a17a-8b7fd7be09f8"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Play2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""19cd8714-8c56-4f3c-9e36-880951fc6210"",
+                    ""path"": ""<DualShockGamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Play2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f02dd7e-dbf1-4b21-8d12-3f3287fdb576"",
+                    ""path"": ""<PS4DualShockGamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Play2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b7dd6e62-838a-4906-9e84-de6bd4bca93d"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Play3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a318a7be-d2a2-4723-8ccc-0c6854ecdb3f"",
+                    ""path"": ""<DualShockGamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Play3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""429c6242-edc5-434a-b6a8-fc771afd67c5"",
+                    ""path"": ""<PS4DualShockGamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Play3"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -577,18 +667,18 @@ public class PlayerControls : IInputActionCollection
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Play"",
+                    ""action"": ""Play1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b88307e1-5266-43f4-8ef7-94576c9c9fee"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""27398903-19c1-468d-ac55-90236195c20d"",
+                    ""path"": ""<PS4DualShockGamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Play"",
+                    ""action"": ""Play1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -600,6 +690,39 @@ public class PlayerControls : IInputActionCollection
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b2834ff-3416-4ab8-bf96-c07169d6e5de"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Controls"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f75a0474-0d41-4de0-8bd1-4e874585c543"",
+                    ""path"": ""<DualShockGamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Controls"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bfd800de-c078-4cbb-9325-1385775285fd"",
+                    ""path"": ""<PS4DualShockGamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Controls"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -627,7 +750,10 @@ public class PlayerControls : IInputActionCollection
         m_InGame_OffensiveAbility1 = m_InGame.GetAction("OffensiveAbility1");
         // Menu
         m_Menu = asset.GetActionMap("Menu");
-        m_Menu_Play = m_Menu.GetAction("Play");
+        m_Menu_Play1 = m_Menu.GetAction("Play1");
+        m_Menu_Play2 = m_Menu.GetAction("Play2");
+        m_Menu_Play3 = m_Menu.GetAction("Play3");
+        m_Menu_Controls = m_Menu.GetAction("Controls");
         m_Menu_Quit = m_Menu.GetAction("Quit");
     }
 
@@ -823,13 +949,19 @@ public class PlayerControls : IInputActionCollection
     // Menu
     private readonly InputActionMap m_Menu;
     private IMenuActions m_MenuActionsCallbackInterface;
-    private readonly InputAction m_Menu_Play;
+    private readonly InputAction m_Menu_Play1;
+    private readonly InputAction m_Menu_Play2;
+    private readonly InputAction m_Menu_Play3;
+    private readonly InputAction m_Menu_Controls;
     private readonly InputAction m_Menu_Quit;
     public struct MenuActions
     {
         private PlayerControls m_Wrapper;
         public MenuActions(PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Play => m_Wrapper.m_Menu_Play;
+        public InputAction @Play1 => m_Wrapper.m_Menu_Play1;
+        public InputAction @Play2 => m_Wrapper.m_Menu_Play2;
+        public InputAction @Play3 => m_Wrapper.m_Menu_Play3;
+        public InputAction @Controls => m_Wrapper.m_Menu_Controls;
         public InputAction @Quit => m_Wrapper.m_Menu_Quit;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
@@ -840,9 +972,18 @@ public class PlayerControls : IInputActionCollection
         {
             if (m_Wrapper.m_MenuActionsCallbackInterface != null)
             {
-                Play.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay;
-                Play.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay;
-                Play.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay;
+                Play1.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay1;
+                Play1.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay1;
+                Play1.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay1;
+                Play2.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay2;
+                Play2.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay2;
+                Play2.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay2;
+                Play3.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay3;
+                Play3.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay3;
+                Play3.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPlay3;
+                Controls.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnControls;
+                Controls.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnControls;
+                Controls.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnControls;
                 Quit.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnQuit;
                 Quit.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnQuit;
                 Quit.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnQuit;
@@ -850,9 +991,18 @@ public class PlayerControls : IInputActionCollection
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
             {
-                Play.started += instance.OnPlay;
-                Play.performed += instance.OnPlay;
-                Play.canceled += instance.OnPlay;
+                Play1.started += instance.OnPlay1;
+                Play1.performed += instance.OnPlay1;
+                Play1.canceled += instance.OnPlay1;
+                Play2.started += instance.OnPlay2;
+                Play2.performed += instance.OnPlay2;
+                Play2.canceled += instance.OnPlay2;
+                Play3.started += instance.OnPlay3;
+                Play3.performed += instance.OnPlay3;
+                Play3.canceled += instance.OnPlay3;
+                Controls.started += instance.OnControls;
+                Controls.performed += instance.OnControls;
+                Controls.canceled += instance.OnControls;
                 Quit.started += instance.OnQuit;
                 Quit.performed += instance.OnQuit;
                 Quit.canceled += instance.OnQuit;
@@ -880,7 +1030,10 @@ public class PlayerControls : IInputActionCollection
     }
     public interface IMenuActions
     {
-        void OnPlay(InputAction.CallbackContext context);
+        void OnPlay1(InputAction.CallbackContext context);
+        void OnPlay2(InputAction.CallbackContext context);
+        void OnPlay3(InputAction.CallbackContext context);
+        void OnControls(InputAction.CallbackContext context);
         void OnQuit(InputAction.CallbackContext context);
     }
 }
