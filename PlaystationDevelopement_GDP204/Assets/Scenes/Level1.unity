@@ -901,12 +901,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfb293e9678c6147a43ed5a4607cfd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalWaves: 5
+  totalWaves: 1
   currentWave: 0
   waveEnemyAmount: 0
   waveSpacerTimer: 0
+  difficulty: 0
   countdownBox: {fileID: 92592479}
   countdown: {fileID: 254982848}
+  waitMessage: {fileID: 507287779}
   waveCount: {fileID: 242383155}
   gruntEnemies:
   - {fileID: 5255377711827524344, guid: 29777d90c7342a348a2bd415a689570d, type: 3}

@@ -14,6 +14,7 @@ public class WaveSpawner : MonoBehaviour
     //UI
     public GameObject countdownBox;
     public TMPro.TextMeshProUGUI countdown;
+    public TMPro.TextMeshProUGUI waitMessage;
     public TMPro.TextMeshProUGUI waveCount;
     // wave lists
     public GameObject[] gruntEnemies;
@@ -53,6 +54,13 @@ public class WaveSpawner : MonoBehaviour
                 waveSpacerTimer += Time.deltaTime;
             }
             countdownBox.SetActive(true);
+
+
+            if (currentWave == totalWaves)
+                waitMessage.text = "Mission ends in:";
+            else 
+                waitMessage.text = "Next wave in:";
+
             countdown.text = (Mathf.Round((5 - waveSpacerTimer) * 10) / 10) + "s";
         }
         else

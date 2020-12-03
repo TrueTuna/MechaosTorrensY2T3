@@ -142,7 +142,7 @@ public class PlayerControls : IInputActionCollection
                 {
                     ""name"": """",
                     ""id"": ""985ef7c1-c4a0-4612-801b-01928d4c068a"",
-                    ""path"": ""<PS4DualShockGamepad>/leftTrigger"",
+                    ""path"": ""<DualShockGamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -153,7 +153,7 @@ public class PlayerControls : IInputActionCollection
                 {
                     ""name"": """",
                     ""id"": ""07015f60-5c05-400f-b41b-09f9ce505331"",
-                    ""path"": ""<DualShockGamepad>/leftTrigger"",
+                    ""path"": ""<DualShockGamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
