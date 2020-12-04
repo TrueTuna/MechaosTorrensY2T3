@@ -159,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
         // trigger animation
         EnableAnimator.SetTrigger("Powering");
     }
+
     // flip flop
     bool checkForPress (bool boolean)
     {

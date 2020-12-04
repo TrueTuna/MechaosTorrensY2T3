@@ -13,6 +13,7 @@ public class MenuNewInputs : MonoBehaviour
     private void Awake()
     {
         controls = new PlayerControls();
+        controls.Menu.Enable();
 
         controls.Menu.Play1.performed += context => PlayGame1();
         controls.Menu.Play2.performed += context => PlayGame2();
