@@ -9,10 +9,12 @@ public class EnemyHealth : MonoBehaviour
     public float MAX_HEALTH;
     public Slider HealthBarRight;
     public Slider HealthBarLeft;
+    public Animator animator;
 
     void Start()
     {
         MAX_HEALTH = health = 100;
+        animator.SetBool("Dead", false);
     }
 
     void Update()
@@ -21,7 +23,11 @@ public class EnemyHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyIsDead") && animator.GetBool("Dead"))
+                Destroy(gameObject);
+
+            animator.SetBool("Dead", true);
+
         }
     }
 }

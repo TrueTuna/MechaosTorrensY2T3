@@ -23,14 +23,20 @@ public class PlayerHealthEnergy : MonoBehaviour
     public PlayerShooting shootingScript;
     public PlayerMovement movementScript;
 
+    // animator
+    public Animator animator;
+
+
     void Start()
     {
         health = MAX_HEALTH;
+        healthChange = health;
         energy = MAX_ENERGY;
         shootingScript = gameObject.GetComponent<PlayerShooting>();
         movementScript = gameObject.GetComponent<PlayerMovement>();
         bloodEffect.color = new Color(0, 0, 0, 0);
         colorValue = 0;
+        animator.SetBool("Dead", false);
     }
 
     void Update()
@@ -38,11 +44,16 @@ public class PlayerHealthEnergy : MonoBehaviour
         HealthBarRight.value = HealthBarLeft.value = (health / MAX_HEALTH) * 100;
         EnergyBarRight.value = EnergyBarleft.value = (energy / MAX_ENERGY) * 100;
 
-
         if (health <= 0)
-            Destroy(gameObject);
-        
-        if(energy <= 0)
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerIsDead") && animator.GetBool("Dead"))
+            {
+                Destroy(gameObject);
+            }
+            animator.SetBool("Dead", true);
+        }
+
+        if (energy <= 0)
         {
             shootingScript.shootingEnabled = false;
             movementScript.movementEnabled = false;

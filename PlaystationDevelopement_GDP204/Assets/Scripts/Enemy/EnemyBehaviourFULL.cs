@@ -13,7 +13,7 @@ public class EnemyBehaviourFULL : MonoBehaviour
     public enum EnemyTypes {GruntGunner, GruntMelee };
     public EnemyTypes enemyType;
 
-    public enum Phases {movement, charging, attacking};
+    public enum Phases {movement, charging, attacking, dead};
     public Phases currentPhase;
 
     // shooting timers
@@ -33,6 +33,7 @@ public class EnemyBehaviourFULL : MonoBehaviour
     bool dashInit = false;
     Vector3 dashTarget;
     public Animator walkAnimator;
+    public EnemyHealth healthScript;
 
     void Start()
     {
@@ -74,6 +75,13 @@ public class EnemyBehaviourFULL : MonoBehaviour
                 switch (currentPhase)
                 {
                     case Phases.movement: // enemy is moving
+
+                        if (healthScript.health <= 0)
+                        {
+                            currentPhase = Phases.dead;
+                            break;
+                        }
+
                         if (timeSinceLastShot > fireRate)
                         {
                             currentPhase = Phases.charging;
@@ -95,9 +103,16 @@ public class EnemyBehaviourFULL : MonoBehaviour
                             EnableAgent(false);
                             chargeUpTimer += Time.deltaTime;
                         }
+
+                        if(healthScript.health <= 0)
+                        {
+                            currentPhase = Phases.dead;
                             break;
+                        }
+                        break;
 
                     case Phases.attacking:
+
                         // create a direction to shoot in
                         Quaternion direction = Quaternion.LookRotation(new Vector3(goal.position.x, transform.position.y, goal.position.z) - transform.position, transform.up);
 
@@ -109,6 +124,10 @@ public class EnemyBehaviourFULL : MonoBehaviour
 
                         currentPhase = Phases.movement;
                             break;
+
+                    case Phases.dead:
+                        goal = gameObject.transform;
+                        break;
 
                 }
                 break;

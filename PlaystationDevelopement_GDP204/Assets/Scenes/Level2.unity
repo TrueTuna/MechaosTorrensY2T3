@@ -2448,6 +2448,7 @@ MonoBehaviour:
   bloodEffect: {fileID: 1271429209}
   shootingScript: {fileID: 0}
   movementScript: {fileID: 0}
+  animator: {fileID: 610428488}
 --- !u!114 &362181654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4146,7 +4147,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5defddc8cf5b2394f80633c0ada35638, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -7009,7 +7010,7 @@ MonoBehaviour:
   currentWave: 0
   waveEnemyAmount: 0
   waveSpacerTimer: 0
-  difficulty: 4
+  difficulty: 2
   countdownBox: {fileID: 1288523250}
   countdown: {fileID: 1551173213}
   waitMessage: {fileID: 719595437}
@@ -12797,6 +12798,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 361911786}
     m_Modifications:
+    - target: {fileID: 5495432674936043417, guid: 85c7db19423dc8d419fbe76d5622e0fd,
+        type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5495432674936043417, guid: 85c7db19423dc8d419fbe76d5622e0fd,
+        type: 3}
+      propertyPath: timer
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8506595153045533558, guid: 85c7db19423dc8d419fbe76d5622e0fd,
         type: 3}
       propertyPath: m_Name

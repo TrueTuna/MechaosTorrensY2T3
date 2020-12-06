@@ -708,7 +708,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54541317}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -994,7 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfb293e9678c6147a43ed5a4607cfd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalWaves: 1
+  totalWaves: 2
   currentWave: 0
   waveEnemyAmount: 0
   waveSpacerTimer: 0
@@ -3491,6 +3491,7 @@ MonoBehaviour:
   bloodEffect: {fileID: 1592393033}
   shootingScript: {fileID: 0}
   movementScript: {fileID: 0}
+  animator: {fileID: 1309728120}
 --- !u!1 &306245185
 GameObject:
   m_ObjectHideFlags: 0
@@ -10584,7 +10585,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5defddc8cf5b2394f80633c0ada35638, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 

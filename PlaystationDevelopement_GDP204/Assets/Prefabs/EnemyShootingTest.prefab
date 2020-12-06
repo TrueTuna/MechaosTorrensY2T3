@@ -630,6 +630,7 @@ MonoBehaviour:
   MAX_HEALTH: 100
   HealthBarRight: {fileID: 3928925285780088974}
   HealthBarLeft: {fileID: 3515659235518040662}
+  animator: {fileID: 8920257045174837274}
 --- !u!114 &5255377711827524346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,6 +656,7 @@ MonoBehaviour:
   bulletSpeed: 10
   dashSpeed: 0
   walkAnimator: {fileID: 8920257045174837274}
+  healthScript: {fileID: 5255377711827524338}
 --- !u!195 &5255377711827524339
 NavMeshAgent:
   m_ObjectHideFlags: 0

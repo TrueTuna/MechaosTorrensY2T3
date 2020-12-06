@@ -733,6 +733,7 @@ MonoBehaviour:
   bloodEffect: {fileID: 867176033}
   shootingScript: {fileID: 0}
   movementScript: {fileID: 0}
+  animator: {fileID: 328985723}
 --- !u!114 &92756574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1855,7 +1856,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5defddc8cf5b2394f80633c0ada35638, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -7990,7 +7991,7 @@ MonoBehaviour:
   currentWave: 0
   waveEnemyAmount: 0
   waveSpacerTimer: 0
-  difficulty: 4
+  difficulty: 3
   countdownBox: {fileID: 575041491}
   countdown: {fileID: 1675916459}
   waitMessage: {fileID: 1840214021}

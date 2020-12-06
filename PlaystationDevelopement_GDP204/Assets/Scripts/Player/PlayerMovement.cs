@@ -82,54 +82,39 @@ public class PlayerMovement : MonoBehaviour
                 transform.position += new Vector3(controlDirection.x * MoveSpeed * Time.deltaTime, 0, controlDirection.y * MoveSpeed * Time.deltaTime);
             }
 
-            // keyboard movement for the sake of movement
-            if (wPressed)
-            {
-                transform.position += new Vector3(0, 0, MoveSpeed * Time.deltaTime);
-            }
-            if (aPressed)
-            {
-                transform.position += new Vector3(-MoveSpeed * Time.deltaTime, 0, 0);
-            }
-            if (sPressed)
-            {
-                transform.position += new Vector3(0, 0, -MoveSpeed * Time.deltaTime);
-            }
-            if (dPressed)
-            {                
-                transform.position += new Vector3(MoveSpeed * Time.deltaTime, 0, 0);
-            }
 
             // relaying axis to animator
             if (controlDirection.x == 0)
             {
-                switch (controlDirection.y)
-                {
-                    case -1:
-                        walkAnimator.SetInteger("Direction", -1);
-                        break;
-                    case 0:
-                        walkAnimator.SetInteger("Direction", 0);
-                        break;
-                    case 1:
-                        walkAnimator.SetInteger("Direction", 1);
-                        break;
-                }
+                walkAnimator.SetFloat("Direction", controlDirection.y);
             }
             else
             {
-                switch (controlDirection.x)
-                {
-                    case -1:
-                        walkAnimator.SetInteger("Direction", -1);
-                        break;
-                    case 0:
-                        walkAnimator.SetInteger("Direction", 0);
-                        break;
-                    case 1:
-                        walkAnimator.SetInteger("Direction", 1);
-                        break;
-                }
+                walkAnimator.SetFloat("Direction", controlDirection.x);
+            }
+
+            // keyboard movement for the sake of movement
+            if (wPressed)
+            {
+                transform.position += new Vector3(0, 0, MoveSpeed * Time.deltaTime);
+                walkAnimator.SetFloat("Direction", 1);
+            }
+
+            if (sPressed)
+            {
+                transform.position += new Vector3(0, 0, -MoveSpeed * Time.deltaTime);
+                walkAnimator.SetFloat("Direction", -1);
+            }
+
+            if (aPressed)
+            {
+                transform.position += new Vector3(-MoveSpeed * Time.deltaTime, 0, 0);
+                walkAnimator.SetFloat("Direction", -1);
+            }
+            if (dPressed)
+            {                
+                transform.position += new Vector3(MoveSpeed * Time.deltaTime, 0, 0);
+                walkAnimator.SetFloat("Direction", 1);
             }
             
             // locking y axis
@@ -147,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             indicator.GetComponent<Image>().color = new Color(1.0f, 0.1f, 0.0f);
-            walkAnimator.SetInteger("Direction", 0);
+            walkAnimator.SetFloat("Direction", 0);
         }
     }
 
