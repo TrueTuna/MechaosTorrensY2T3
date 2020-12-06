@@ -8,7 +8,6 @@ public class ExtraControlsScript : MonoBehaviour
 {
 
     private bool gamePaused;
-    private float currentTimeScale;
 
     public GameObject pauseScreen;
     private EndGame endGame;
@@ -29,7 +28,6 @@ public class ExtraControlsScript : MonoBehaviour
     void Start()
     {
         gamePaused = false;
-        currentTimeScale = 1.0f; // assuming normal runtime to start 
         pauseScreen.SetActive(false);
         endGame = gameObject.GetComponent<EndGame>();
     }
@@ -39,13 +37,12 @@ public class ExtraControlsScript : MonoBehaviour
         if (gamePaused)
         {
             gamePaused = false;
-            Time.timeScale = currentTimeScale;
+            Time.timeScale = 1.0f;
             pauseScreen.SetActive(false);
         }
         else
         {
             gamePaused = true;
-            currentTimeScale = Time.timeScale;
             Time.timeScale = 0.0f;
             pauseScreen.SetActive(true);
         }
